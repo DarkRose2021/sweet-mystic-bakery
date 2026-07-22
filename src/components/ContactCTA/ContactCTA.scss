@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+
+.contactCTA {
+	background: $cream;
+	padding: 5rem 1rem;
+
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__content {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	h2 {
+		color: $brown;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		color: $forest;
+		line-height: 1.7;
+		margin-bottom: 2rem;
+	}
+
+	&__buttons {
+		padding: 0.8rem 2rem;
+		border-radius: $radius;
+		background: $forest;
+		color: $cream;
+		font-size: 1.1rem;
+		transition: $transition;
+
+		&:hover {
+			background: $gold;
+			color: $brown;
+			transform: translateY(-3px);
+			box-shadow: $shadow;
+		}
+	}
+}

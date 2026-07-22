@@ -7,9 +7,18 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^12.42.2",
     "react": "^19.2.8",
+    "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.8",
+    "react-helmet-async": "^3.0.0",
+    "react-hook-form": "^7.82.0",
+    "react-router-dom": "^7.18.1",
     "react-scripts": "5.0.1",
+    "sass": "^1.101.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -35,5 +44,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "core-js@3.49.0": true,
+    "core-js-pure@3.49.0": true
   }
 }

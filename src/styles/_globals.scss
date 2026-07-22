@@ -1,0 +1,37 @@
+@use "./variables" as *;
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    background:$cream;
+    color:$brown;
+    font-family:$font;
+    line-height:1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family:$header-font;
+    color:$forest;
+}
+
+a {
+    text-decoration:none;
+    color:$forest;
+
+    &:hover {
+        color:$gold;
+    }
+}
+
+button {
+    font-family:$font;
+    border:none;
+    cursor:pointer;
+}
