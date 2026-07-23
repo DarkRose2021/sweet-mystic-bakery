@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./Launch.scss";
 
 import logo from "../../assets/images/headerimg.png";

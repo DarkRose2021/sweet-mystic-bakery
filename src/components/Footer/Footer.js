@@ -49,15 +49,15 @@ function Footer() {
 					<h3>Follow Along</h3>
 
 					<div className="social-icons">
-						<a href="#" aria-label="Facebook">
+						<a href="www.google.com#" aria-label="Facebook">
 							Facebook
 						</a>
 
-						<a href="#" aria-label="Instagram">
+						<a href="www.google.com" aria-label="Instagram">
 							Instagram
 						</a>
 
-						<a href="#" aria-label="Pinterest">
+						<a href="www.google.com" aria-label="Pinterest">
 							Pinterest
 						</a>
 					</div>

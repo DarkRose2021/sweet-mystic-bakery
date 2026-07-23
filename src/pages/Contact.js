@@ -74,11 +74,11 @@ function Contact() {
 						<h3>✦ Follow Along</h3>
 
 						<div className="social-links">
-							<a href="#">Facebook</a>
+							<a href="www.google.com">Facebook</a>
 
-							<a href="#">Instagram</a>
+							<a href="www.google.com">Instagram</a>
 
-							<a href="#">Pinterest</a>
+							<a href="www.google.com">Pinterest</a>
 						</div>
 					</div>
 				</div>
