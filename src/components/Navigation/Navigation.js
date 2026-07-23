@@ -29,10 +29,6 @@ function Navigation() {
 					</li>
 
 					<li>
-						<Link to="/custom-orders">Custom Orders</Link>
-					</li>
-
-					<li>
 						<Link to="/contact">Contact</Link>
 					</li>
 				</ul>

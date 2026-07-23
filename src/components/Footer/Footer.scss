@@ -1,0 +1,93 @@
+@use "../../styles/variables" as *;
+
+.footer {
+	background: $brown;
+	color: $cream;
+	padding: 4rem 2rem 1.5rem;
+	margin-top: 4rem;
+
+	.footer-container {
+		max-width: 1200px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 1fr;
+		gap: 3rem;
+	}
+
+	h2 {
+		font-family: $header-font;
+		color: $gold;
+		margin-bottom: 1rem;
+	}
+
+	h3 {
+		color: $gold;
+		font-family: $header-font;
+		font-size: 1.1rem;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		font-family: $font;
+		color: $cream;
+		opacity: 0.9;
+	}
+
+	.location {
+		color: $sage;
+		margin-top: 1rem;
+	}
+
+	.footer-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+
+		a {
+			color: $cream;
+			transition: $transition;
+			&:hover {
+				color: $fox;
+				transform: translateX(5px);
+			}
+		}
+	}
+
+	.footer-social {
+		.social-icons {
+			display: flex;
+			flex-direction: column;
+			gap: 0.6rem;
+			a {
+				color: $cream;
+				transition: $transition;
+				&:hover {
+					color: $gold;
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		max-width: 1200px;
+		margin: 3rem auto 0;
+		padding-top: 1.5rem;
+		border-top: 1px solid rgba(217, 164, 65, 0.4);
+		text-align: center;
+		p {
+			font-size: 0.9rem;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.footer-container {
+		grid-template-columns: 1fr !important;
+		text-align: center;
+	}
+
+	.footer-links,
+	.footer-social {
+		align-items: center;
+	}
+}

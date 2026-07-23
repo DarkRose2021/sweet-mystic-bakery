@@ -1,0 +1,97 @@
+@use "../styles/variables" as *;
+
+.faq-page {
+	background: $cream;
+	padding-bottom: 5rem;
+}
+
+.faq-header {
+	text-align: center;
+	padding: 5rem 2rem 3rem;
+
+	span {
+		color: $fox;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 0.85rem;
+	}
+
+	h1 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2.2rem, 5vw, 4rem);
+		margin: 1rem 0;
+	}
+
+	p {
+		font-family: $font;
+		color: $brown;
+		font-size: 1.2rem;
+	}
+}
+
+.faq-container {
+	max-width: 900px;
+	margin: auto;
+	padding: 0 2rem;
+}
+
+.faq-item {
+	background: white;
+	border-radius: $radius;
+	margin-bottom: 1rem;
+	box-shadow: $shadow;
+	overflow: hidden;
+	transition: $transition;
+
+	button {
+		width: 100%;
+		padding: 1.5rem;
+		background: none;
+		border: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
+		color: $forest;
+		font-family: $header-font;
+		font-size: 1.1rem;
+		text-align: left;
+	}
+
+	.icon {
+		color: $gold;
+		font-size: 2rem;
+		line-height: 1;
+	}
+
+	.faq-answer {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.4s ease;
+
+		p {
+			padding: 0 1.5rem 1.5rem;
+			color: $brown;
+			font-family: $font;
+			line-height: 1.7;
+		}
+	}
+
+	&.active {
+		border-left: 5px solid $gold;
+		.faq-answer {
+			max-height: 300px;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.faq-container {
+		padding: 0 1rem;
+	}
+
+	.faq-item button {
+		font-size: 1rem;
+	}
+}

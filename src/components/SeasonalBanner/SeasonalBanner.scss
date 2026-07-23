@@ -1,0 +1,162 @@
+@use "../../styles/variables" as *;
+
+
+.seasonal-banner {
+
+    min-height:420px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+
+    margin:4rem 0;
+
+
+
+    .seasonal-overlay {
+
+
+        min-height:420px;
+
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+
+        background:
+        linear-gradient(
+            rgba(75,46,42,.72),
+            rgba(75,46,42,.72)
+        );
+
+
+        padding:2rem;
+
+    }
+
+
+
+
+    .seasonal-content {
+
+
+        max-width:750px;
+
+        text-align:center;
+
+        color:$cream;
+
+
+
+        .season-label {
+
+            color:$gold;
+
+            text-transform:uppercase;
+
+            letter-spacing:3px;
+
+            font-size:.9rem;
+
+        }
+
+
+
+        h2 {
+
+            font-family:$header-font;
+
+            color:$cream;
+
+            font-size:clamp(2rem,5vw,3.5rem);
+
+            margin:1rem 0;
+
+        }
+
+
+
+        p {
+
+            font-family:$font;
+
+            font-size:1.2rem;
+
+            line-height:1.8;
+
+            margin-bottom:2rem;
+
+        }
+
+
+    }
+
+
+
+    .season-button {
+
+
+        display:inline-block;
+
+
+        background:$gold;
+
+        color:$brown;
+
+
+        padding:.9rem 2rem;
+
+
+        border-radius:$radius;
+
+
+        font-weight:bold;
+
+
+        transition:$transition;
+
+
+
+        &:hover {
+
+            background:$fox;
+
+            color:$cream;
+
+            transform:translateY(-4px);
+
+            box-shadow:$shadow;
+
+        }
+
+    }
+
+}
+
+
+
+// Mobile
+
+@media(max-width:$tablet) {
+
+
+    .seasonal-banner {
+
+        min-height:350px;
+
+    }
+
+
+    .seasonal-overlay {
+
+        min-height:350px !important;
+
+    }
+
+}

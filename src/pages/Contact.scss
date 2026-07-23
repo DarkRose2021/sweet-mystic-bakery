@@ -1,0 +1,141 @@
+@use "../styles/variables" as *;
+
+.contact-page {
+	background: $cream;
+	padding-bottom: 5rem;
+}
+
+.contact-header {
+	text-align: center;
+	padding: 5rem 2rem 3rem;
+
+	span {
+		color: $fox;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 0.85rem;
+	}
+
+	h1 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2.2rem, 5vw, 4rem);
+		margin: 1rem 0;
+	}
+
+	p {
+		color: $brown;
+		font-size: 1.2rem;
+		max-width: 650px;
+		margin: auto;
+	}
+}
+
+.contact-container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: start;
+}
+
+.contact-info {
+	h2 {
+		font-family: $header-font;
+		color: $forest;
+		margin-bottom: 1rem;
+	}
+	p {
+		color: $brown;
+		line-height: 1.7;
+	}
+}
+
+.info-item {
+	margin-top: 2rem;
+
+	h3 {
+		font-family: $header-font;
+		color: $gold;
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.social-links {
+	display: flex;
+	gap: 1rem;
+	a {
+		color: $forest;
+		transition: $transition;
+		&:hover {
+			color: $fox;
+		}
+	}
+}
+
+.contact-form {
+	background: white;
+	padding: 2rem;
+	border-radius: $radius;
+	box-shadow: $shadow;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1.3rem;
+
+	label {
+		color: $forest;
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+
+	input,
+	textarea,
+	select {
+		padding: 0.9rem;
+		border-radius: $radius;
+		border: 1px solid rgba(75, 46, 42, 0.25);
+		background: $cream;
+		color: $brown;
+		font-family: $font;
+		&:focus {
+			outline: none;
+			border-color: $gold;
+		}
+	}
+}
+
+button {
+	width: 100%;
+	padding: 1rem;
+	background: $forest;
+	color: $cream;
+	border-radius: $radius;
+	font-size: 1.1rem;
+	transition: $transition;
+
+	&:hover {
+		background: $gold;
+		color: $brown;
+		transform: translateY(-3px);
+		box-shadow: $shadow;
+	}
+}
+
+.success-message {
+	margin-top: 1rem;
+	text-align: center;
+	color: $forest;
+	font-weight: bold;
+}
+
+@media (max-width: $tablet) {
+	.contact-container {
+		grid-template-columns: 1fr;
+	}
+}

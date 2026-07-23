@@ -1,9 +1,76 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+import "./ProductCard.scss";
 
-const ProductCard = () => {
-  return (
-    <div>ProductCard</div>
-  )
+function ProductCard({ product }) {
+
+    return (
+        <article className="product-card">
+
+
+            {/* Image */}
+            <div className="product-image">
+
+                <img
+                    src={product.image}
+                    alt={product.name}
+                />
+
+
+                {product.featured && (
+                    <span className="badge">
+                        Bestseller
+                    </span>
+                )}
+
+            </div>
+
+
+
+            {/* Content */}
+            <div className="product-content">
+
+
+                <p className="category">
+                    {product.category}
+                </p>
+
+
+                <h3>
+                    {product.name}
+                </h3>
+
+
+                <p className="description">
+                    {product.description}
+                </p>
+
+
+
+                <div className="product-footer">
+
+
+                    <span className="price">
+                        ${product.price}
+                    </span>
+
+
+
+                    <Link
+                        to={`/menu/${product.id}`}
+                        className="view-button"
+                    >
+                        View
+                    </Link>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+    );
 }
 
-export default ProductCard
+export default ProductCard;

@@ -1,0 +1,170 @@
+@use "../styles/variables" as *;
+
+.about-page {
+    background: $cream;
+}
+
+.about-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(rgba(75,46,42,.65), rgba(75,46,42,.65));
+        // ,
+        // url("../../assets/images/about-hero.jpg") center/cover;
+
+    .overlay {
+        text-align: center;
+        color: $cream;
+        padding: 2rem;
+        max-width: 800px;
+
+        span {
+            color: $gold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-family: $header-font;
+            font-size: clamp(2.5rem,5vw,4.5rem);
+            margin: 1rem 0;
+            color: $cream;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.story-section,
+.process {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-image img,
+.process-image img {
+    width: 100%;
+    border-radius: $radius;
+    box-shadow: $shadow;
+}
+
+.section-label {
+    color: $fox;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.story-content h2,
+.process-content h2 {
+    color: $forest;
+    font-family: $header-font;
+    margin: 1rem 0;
+}
+
+.story-content p,
+.process-content p {
+    color: $brown;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.values {
+    background: $sage;
+    padding: 5rem 2rem;
+
+    .section-heading {
+        text-align: center;
+        margin-bottom: 3rem;
+
+        span {
+            color: $fox;
+        }
+
+        h2 {
+            color: $forest;
+            font-family: $header-font;
+            margin-top: .75rem;
+        }
+    }
+}
+
+.value-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+
+    article {
+        background: $cream;
+        padding: 2rem;
+        border-radius: $radius;
+        box-shadow: $shadow;
+        text-align: center;
+
+        h3 {
+            color: $forest;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: $brown;
+        }
+    }
+}
+
+.about-cta {
+    text-align: center;
+    padding: 5rem 2rem;
+
+    h2 {
+        font-family: $header-font;
+        color: $forest;
+    }
+
+    p {
+        color: $brown;
+        margin: 1rem 0 2rem;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: $forest;
+        color: $cream;
+        padding: 1rem 2rem;
+        border-radius: $radius;
+        transition: $transition;
+
+        &:hover {
+            background: $gold;
+            color: $brown;
+            box-shadow: $shadow;
+            transform: translateY(-3px);
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+
+    .story-section,
+    .process,
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-section,
+    .process {
+        text-align: center;
+    }
+}

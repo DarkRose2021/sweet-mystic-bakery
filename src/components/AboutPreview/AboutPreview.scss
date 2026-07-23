@@ -1,0 +1,91 @@
+@use "../../styles/variables" as *;
+
+.about-preview {
+	padding: 5rem 2rem;
+	background: $cream;
+
+	.about-container {
+		max-width: 1200px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 4rem;
+	}
+
+	.about-image {
+		position: relative;
+		img {
+			width: 100%;
+			border-radius: $radius;
+			box-shadow: $shadow;
+			display: block;
+		}
+
+		.image-accent {
+			position: absolute;
+			bottom: -20px;
+			right: -20px;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background: $gold;
+			color: $brown;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2rem;
+		}
+	}
+
+	.about-content {
+		.eyebrow {
+			color: $fox;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-size: 0.85rem;
+		}
+
+		h2 {
+			font-family: $header-font;
+			color: $forest;
+			font-size: clamp(2rem, 4vw, 3rem);
+			margin: 1rem 0;
+		}
+
+		p {
+			color: $brown;
+			font-size: 1.1rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.about-button {
+		display: inline-block;
+		margin-top: 1rem;
+		padding: 0.8rem 1.8rem;
+		background: $forest;
+		color: $cream;
+		border-radius: $radius;
+		transition: $transition;
+
+		&:hover {
+			background: $gold;
+			color: $brown;
+			transform: translateY(-3px);
+			box-shadow: $shadow;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.about-container {
+		grid-template-columns: 1fr !important;
+		text-align: center;
+	}
+
+	.about-image {
+		max-width: 500px;
+		margin: auto;
+	}
+}

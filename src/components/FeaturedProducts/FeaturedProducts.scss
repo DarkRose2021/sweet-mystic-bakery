@@ -1,0 +1,40 @@
+@use "../../styles/variables" as *;
+
+.featured-products {
+	padding: 5rem 2rem;
+	background: $cream;
+}
+
+.featured-header {
+	text-align: center;
+	max-width: 700px;
+	margin: 0 auto 3rem;
+
+	span {
+		color: $fox;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 0.85rem;
+	}
+
+	h2 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2rem, 4vw, 3.5rem);
+		margin: 1rem 0;
+	}
+
+	p {
+		color: $brown;
+		line-height: 1.7;
+		font-size: 1.1rem;
+	}
+}
+
+.featured-grid {
+	max-width: 1200px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 2rem;
+}

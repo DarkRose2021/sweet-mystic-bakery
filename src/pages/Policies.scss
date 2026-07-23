@@ -1,0 +1,108 @@
+@use "../styles/variables" as *;
+
+.policies-page {
+	background: $cream;
+	padding-bottom: 5rem;
+}
+
+.policies-header {
+	text-align: center;
+	padding: 5rem 2rem 3rem;
+
+	span {
+		color: $fox;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 0.85rem;
+	}
+
+	h1 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		margin: 1rem 0;
+	}
+
+	p {
+		color: $brown;
+		font-size: 1.2rem;
+	}
+}
+
+.policies-grid {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 2rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+}
+
+.policy-card {
+	background: white;
+	border-radius: $radius;
+	padding: 2rem;
+	box-shadow: $shadow;
+	transition: $transition;
+
+	&:hover {
+		transform: translateY(-6px);
+	}
+
+	.policy-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	h2 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		color: $brown;
+		line-height: 1.8;
+	}
+}
+
+.policy-note {
+	max-width: 800px;
+	margin: 4rem auto 0;
+	padding: 3rem 2rem;
+	text-align: center;
+	background: $sage;
+	border-radius: $radius;
+
+	h2 {
+		font-family: $header-font;
+		color: $forest;
+	}
+
+	p {
+		color: $brown;
+		margin: 1rem 0 2rem;
+		line-height: 1.7;
+	}
+
+	a {
+		display: inline-block;
+		background: $forest;
+		color: $cream;
+		padding: 1rem 2rem;
+		border-radius: $radius;
+		transition: $transition;
+
+		&:hover {
+			background: $gold;
+			color: $brown;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.policies-grid {
+		grid-template-columns: 1fr;
+	}
+}

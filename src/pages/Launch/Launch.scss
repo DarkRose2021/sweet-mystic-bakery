@@ -1,0 +1,127 @@
+@use "../../styles/variables" as *;
+
+.launch-page {
+	min-height: 100vh;
+	background: radial-gradient(
+			circle at top,
+			rgba(217, 164, 65, 0.25),
+			transparent 40%
+		),
+		$cream;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+}
+
+.launch-card {
+	max-width: 1200px;
+	width: 100%;
+	background: $cream;
+	border-radius: $radius;
+	box-shadow: $shadow;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.launch-content {
+	padding: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	span {
+		color: $fox;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		font-size: 0.85rem;
+	}
+
+	h1 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		margin: 1rem 0 0.5rem;
+	}
+
+	h2 {
+		font-family: $font;
+		color: $brown;
+		font-style: italic;
+		font-size: 2rem;
+	}
+
+	p {
+		color: $brown;
+		line-height: 1.8;
+		margin: 2rem 0;
+		font-size: 1.15rem;
+	}
+}
+
+.launch-logo {
+	margin-bottom: 1rem;
+	img {
+		max-width: 700px;
+	}
+}
+
+.launch-actions {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	a {
+		padding: 1rem 2rem;
+		border-radius: $radius;
+		transition: 0.3s ease;
+	}
+}
+
+.launch-button {
+	background: $forest;
+	color: $cream;
+
+	&:hover {
+		background: $gold;
+		color: $brown;
+	}
+}
+
+.social-button {
+	background: $sage;
+	color: $brown;
+
+	&:hover {
+		background: $fox;
+		color: $cream;
+	}
+}
+
+.launch-image {
+	min-height: 500px;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: $tablet) {
+	.launch-card {
+		grid-template-columns: 1fr;
+	}
+
+	.launch-content {
+		padding: 2rem;
+		text-align: center;
+	}
+
+	.launch-actions {
+		justify-content: center;
+	}
+
+	.launch-image {
+		min-height: 300px;
+	}
+}

@@ -1,0 +1,102 @@
+@use "../styles/variables" as *;
+
+.privacy-page {
+	background: $cream;
+	padding-bottom: 5rem;
+}
+
+.privacy-header {
+	text-align: center;
+	padding: 5rem 2rem 3rem;
+
+	span {
+		color: $fox;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 0.85rem;
+	}
+
+	h1 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		margin: 1rem 0;
+	}
+
+	p {
+		color: $brown;
+		font-family: $font;
+		font-size: 1.2rem;
+	}
+}
+
+.privacy-content {
+	max-width: 900px;
+	margin: auto;
+	padding: 0 2rem;
+}
+
+.privacy-card {
+	background: white;
+	padding: 2rem;
+	margin-bottom: 1.5rem;
+	border-radius: $radius;
+	box-shadow: $shadow;
+	transition: $transition;
+
+	&:hover {
+		transform: translateY(-4px);
+	}
+
+	h2 {
+		font-family: $header-font;
+		color: $forest;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	p {
+		color: $brown;
+		line-height: 1.8;
+	}
+}
+
+.privacy-contact {
+	max-width: 800px;
+	margin: 4rem auto 0;
+	padding: 3rem 2rem;
+	text-align: center;
+	background: $sage;
+	border-radius: $radius;
+
+	h2 {
+		font-family: $header-font;
+		color: $forest;
+	}
+
+	p {
+		color: $brown;
+		line-height: 1.7;
+		margin: 1rem 0 2rem;
+	}
+
+	a {
+		display: inline-block;
+		padding: 1rem 2rem;
+		background: $forest;
+		color: $cream;
+		border-radius: $radius;
+		transition: $transition;
+
+		&:hover {
+			background: $gold;
+			color: $brown;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.privacy-content {
+		padding: 0 1rem;
+	}
+}

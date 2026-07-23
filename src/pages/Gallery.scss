@@ -1,0 +1,121 @@
+@use "../styles/variables" as *;
+
+.gallery-page {
+	background: $cream;
+	min-height: 100vh;
+	padding-bottom: 5rem;
+}
+
+.gallery-header {
+	text-align: center;
+	padding: 5rem 2rem 3rem;
+
+	span {
+		color: $fox;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+
+	h1 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		margin: 1rem 0;
+	}
+
+	p {
+		max-width: 700px;
+		margin: auto;
+		color: $brown;
+		font-size: 1.15rem;
+	}
+}
+
+.gallery-filters {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	margin-bottom: 3rem;
+
+	button {
+		padding: 0.75rem 1.5rem;
+		border: none;
+		border-radius: $radius;
+		background: $sage;
+		color: $brown;
+		cursor: pointer;
+		transition: $transition;
+
+		&:hover {
+			background: $gold;
+			color: $brown;
+		}
+
+		&.active {
+			background: $forest;
+			color: $cream;
+		}
+	}
+}
+
+.gallery-grid {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.gallery-card {
+	position: relative;
+	overflow: hidden;
+	border-radius: $radius;
+	box-shadow: $shadow;
+
+	img {
+		width: 100%;
+		height: 320px;
+		object-fit: cover;
+		transition: 0.4s ease;
+	}
+
+	.overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(75, 46, 42, 0.75);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: $cream;
+		opacity: 0;
+		transition: $transition;
+
+		h3 {
+			font-family: $header-font;
+			margin-bottom: 0.5rem;
+		}
+
+		span {
+			color: $gold;
+		}
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.08);
+		}
+
+		.overlay {
+			opacity: 1;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.gallery-grid {
+		grid-template-columns: 1fr;
+	}
+}

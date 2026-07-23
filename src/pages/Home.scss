@@ -1,0 +1,37 @@
+@use "../styles/variables" as *;
+
+.home {
+	background: $cream;
+}
+
+.home-section {
+	max-width: 1200px;
+	margin: auto;
+	padding: 5rem 2rem;
+}
+
+.section-header {
+	text-align: center;
+	margin-bottom: 3rem;
+	span {
+		color: $fox;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 0.85rem;
+	}
+
+	h2 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2rem, 4vw, 3.5rem);
+		margin: 1rem 0;
+	}
+
+	p {
+		max-width: 650px;
+		margin: auto;
+		color: $brown;
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+}
