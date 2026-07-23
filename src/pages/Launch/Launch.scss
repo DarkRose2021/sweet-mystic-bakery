@@ -11,7 +11,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 2rem;
+	padding: 1rem;
 }
 
 .launch-card {
@@ -33,15 +33,16 @@
 
 	span {
 		color: $fox;
-		letter-spacing: 3px;
 		text-transform: uppercase;
+		letter-spacing: 3px;
 		font-size: 0.85rem;
 	}
 
 	h1 {
 		font-family: $header-font;
 		color: $forest;
-		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-size: clamp(2.2rem, 5vw, 4rem);
+		line-height: 1.2;
 		margin: 1rem 0 0.5rem;
 	}
 
@@ -55,15 +56,15 @@
 	p {
 		color: $brown;
 		line-height: 1.8;
-		margin: 2rem 0;
-		font-size: 1.15rem;
+		margin: 1.5rem 0;
+		font-size: 1.1rem;
 	}
 }
 
 .launch-logo {
-	margin-bottom: 1rem;
 	img {
-		max-width: 700px;
+		width: min(250px, 80%);
+		height: auto;
 	}
 }
 
@@ -71,9 +72,11 @@
 	display: flex;
 	gap: 1rem;
 	flex-wrap: wrap;
+
 	a {
 		padding: 1rem 2rem;
 		border-radius: $radius;
+		text-align: center;
 		transition: 0.3s ease;
 	}
 }
@@ -107,21 +110,77 @@
 	}
 }
 
-@media (max-width: $tablet) {
+@media (max-width: 768px) {
+	.launch-page {
+		padding: 0.75rem;
+		align-items: flex-start;
+	}
+
 	.launch-card {
-		grid-template-columns: 1fr;
-	}
-
-	.launch-content {
-		padding: 2rem;
-		text-align: center;
-	}
-
-	.launch-actions {
-		justify-content: center;
+		display: flex;
+		flex-direction: column;
+		border-radius: 14px;
 	}
 
 	.launch-image {
-		min-height: 300px;
+		order: -1;
+		min-height: 220px;
+		max-height: 280px;
+		img {
+			height: 260px;
+		}
+	}
+
+	.launch-content {
+		padding: 2rem 1.5rem;
+		text-align: center;
+		align-items: center;
+
+		span {
+			font-size: 0.7rem;
+			letter-spacing: 2px;
+		}
+
+		h1 {
+			font-size: 2.2rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+
+	.launch-logo {
+		img {
+			width: 200px;
+		}
+	}
+
+	.launch-actions {
+		flex-direction: column;
+		width: 100%;
+		a {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.launch-content {
+		padding: 1.5rem 1rem;
+	}
+
+	.launch-image {
+		img {
+			height: 200px;
+		}
+	}
+
+	.launch-content h1 {
+		font-size: 1.8rem;
 	}
 }

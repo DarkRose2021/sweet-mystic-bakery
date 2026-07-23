@@ -1,7 +1,7 @@
 import "./Launch.scss";
 
-import logo from "../../assets/images/headerimg.png";
-import bakeryImage from "../../assets/images/Main-Logo.png";
+import logo from "../../assets/images/Main-Logo.png";
+import bakeryImage from "../../assets/images/temp.jpg";
 
 function Launch() {
 	return (
