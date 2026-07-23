@@ -7,9 +7,6 @@ function Launch() {
 	return (
 		<main className="launch-page">
 			<section className="launch-card">
-				<div className="launch-logo">
-					<img src={logo} alt="Sweet Mystic Bakery" />
-				</div>
 
 				<div className="launch-content">
 					<span>✦ Something Sweet Is Brewing ✦</span>
@@ -41,7 +38,7 @@ function Launch() {
 				</div>
 
 				<div className="launch-image">
-					<img src={bakeryImage} alt="Sweet treats" />
+					<img src={logo} alt="Sweet treats" />
 				</div>
 			</section>
 		</main>
