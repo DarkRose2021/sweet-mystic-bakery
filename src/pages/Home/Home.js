@@ -1,11 +1,11 @@
-import Hero from "../components/Hero/Hero";
-import ProductGrid from "../components/ProductGrid/ProductGrid";
-import SeasonalBanner from "../components/SeasonalBanner/SeasonalBanner";
-import AboutPreview from "../components/AboutPreview/AboutPreview";
-import Testimonial from "../components/Testimonial/Testimonial";
-import ContactCTA from "../components/ContactCTA/ContactCTA";
+import Hero from "../../components/Hero/Hero";
+import ProductGrid from "../../components/ProductGrid/ProductGrid";
+// import SeasonalBanner from "../components/SeasonalBanner/SeasonalBanner";
+import AboutPreview from "../../components/AboutPreview/AboutPreview";
+// import Testimonial from "../components/Testimonial/Testimonial";
+import ContactCTA from "../../components/ContactCTA/ContactCTA";
 
-import autumnBanner from "../assets/images/Horizontal-logo.png";
+// import autumnBanner from "../assets/images/Horizontal-logo.png";
 
 import "./Home.scss";
 
@@ -26,14 +26,14 @@ function Home() {
 				</div>
 				<ProductGrid />
 			</section>
-			<SeasonalBanner
+			{/* <SeasonalBanner
 				season="Autumn Collection"
 				title="Cozy Flavors Have Arrived"
 				description="Celebrate the season with pumpkin spice cupcakes, caramel cookies, cinnamon rolls, and other handcrafted favorites available for a limited time."
 				image={autumnBanner}
-			/>
+			/> */}
 			<AboutPreview />
-			<Testimonial />
+			{/* <Testimonial /> */}
 			<ContactCTA />
 		</main>
 	);

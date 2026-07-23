@@ -1,11 +1,11 @@
-import cookies from "../assets/images/Favicon.png";
-import cupcakes from "../assets/images/Favicon.png";
-import cake from "../assets/images/Favicon.png";
-import cinnamon from "../assets/images/Favicon.png";
-import macarons from "../assets/images/Favicon.png";
-import brownies from "../assets/images/Favicon.png";
-import pie from "../assets/images/Favicon.png";
-import bread from "../assets/images/Favicon.png";
+import cookies from "../../assets/images/Favicon.png";
+import cupcakes from "../../assets/images/Favicon.png";
+import cake from "../../assets/images/Favicon.png";
+import cinnamon from "../../assets/images/Favicon.png";
+import macarons from "../../assets/images/Favicon.png";
+import brownies from "../../assets/images/Favicon.png";
+import pie from "../../assets/images/Favicon.png";
+import bread from "../../assets/images/Favicon.png";
 
 export const galleryImages = [
 	{

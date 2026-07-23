@@ -2,20 +2,20 @@ import { useState } from "react";
 import "./Gallery.scss";
 import { galleryImages } from "./galleryData";
 
-const categories = [
-	"All",
-	"Cookies",
-	"Cupcakes",
-	"Cakes",
-	"Breakfast",
-	"Pastries",
-	"Bars",
-	"Pies",
-	"Bread",
-];
+// const categories = [
+// 	"All",
+// 	"Cookies",
+// 	"Cupcakes",
+// 	"Cakes",
+// 	"Breakfast",
+// 	"Pastries",
+// 	"Bars",
+// 	"Pies",
+// 	"Bread",
+// ];
 
 function Gallery() {
-	const [activeCategory, setActiveCategory] = useState("All");
+	const [activeCategory] = useState("All");
 
 	const filteredImages =
 		activeCategory === "All"
@@ -35,7 +35,7 @@ function Gallery() {
 				</p>
 			</section>
 
-			<section className="gallery-filters">
+			{/* <section className="gallery-filters">
 				{categories.map((category) => (
 					<button
 						key={category}
@@ -45,7 +45,7 @@ function Gallery() {
 						{category}
 					</button>
 				))}
-			</section>
+			</section> */}
 
 			<section className="gallery-grid">
 				{filteredImages.map((item) => (

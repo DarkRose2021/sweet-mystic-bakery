@@ -3,49 +3,51 @@ import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Menu from "./pages/Menu";
-import Gallery from "./pages/Gallery";
-import CustomOrders from "./pages/CustomOrders";
-import FAQ from "./pages/FAQ";
-import Contact from "./pages/Contact";
-import Policies from "./pages/Policies";
-import Privacy from "./pages/Privacy";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Menu from "./pages/Menu/Menu";
+import Gallery from "./pages/Gallery/Gallery";
+import CustomOrders from "./pages/CustomOrders/CustomOrders";
+import FAQ from "./pages/FAQ/FAQ";
+import Contact from "./pages/Contact/Contact";
+import Policies from "./pages/Policies/Policies";
+import Privacy from "./pages/Privacy/Privacy";
 import Admin from "./pages/Admin/Admin";
 import Launch from "./pages/Launch/Launch";
+import Allergens from "./pages/Allergens/Allergens";
 
-const SITE_LAUNCHED = false;
+const SITE_LAUNCHED = true;
 
 function App() {
 	return (
 		<>
-			<Routes>
-				{SITE_LAUNCHED ? (
-					<>
-						<Navigation />
+			{SITE_LAUNCHED ? (
+				<>
+					<Navigation />
 
-						<main>
-							
-								<Route path="/" element={<Launch />} />
-								<Route path="/" element={<Home />} />
-								<Route path="/about" element={<About />} />
-								<Route path="/menu" element={<Menu />} />
-								<Route path="/gallery" element={<Gallery />} />
-								<Route path="/custom-orders" element={<CustomOrders />} />
-								<Route path="/faq" element={<FAQ />} />
-								<Route path="/contact" element={<Contact />} />
-								<Route path="/policies" element={<Policies />} />
-								<Route path="/privacy" element={<Privacy />} />
-								<Route path="/admin" element={<Admin />} />
-						</main>
+					<main>
+						<Routes>
+							<Route path="/" element={<Home />} />
+							<Route path="/about" element={<About />} />
+							<Route path="/menu" element={<Menu />} />
+							<Route path="/gallery" element={<Gallery />} />
+							<Route path="/custom-orders" element={<CustomOrders />} />
+							<Route path="/faq" element={<FAQ />} />
+							<Route path="/contact" element={<Contact />} />
+							<Route path="/policies" element={<Policies />} />
+							<Route path="/privacy" element={<Privacy />} />
+							<Route path="/admin" element={<Admin />} />
+							<Route path="/allergens" element={<Allergens />} />
+						</Routes>
+					</main>
 
-						<Footer />
-					</>
-				) : (
-						<Route path="*" element={<Launch />} />
-				)}
-			</Routes>
+					<Footer />
+				</>
+			) : (
+				<Routes>
+					<Route path="*" element={<Launch />} />
+				</Routes>
+			)}
 		</>
 	);
 }

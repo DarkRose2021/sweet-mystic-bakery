@@ -26,16 +26,17 @@
 		margin-bottom: 2rem;
 	}
 
-	&__buttons {
+	.btn {
 		padding: 0.8rem 2rem;
 		border-radius: $radius;
-		background: $forest;
-		color: $cream;
+		background: $gold;
+		color: $brown;
 		font-size: 1.1rem;
 		transition: $transition;
+    margin-left: 1rem;
 
 		&:hover {
-			background: $gold;
+			background: $fox;
 			color: $brown;
 			transform: translateY(-3px);
 			box-shadow: $shadow;

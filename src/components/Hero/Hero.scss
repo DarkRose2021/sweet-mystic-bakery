@@ -1,208 +1,104 @@
 @use "../../styles/variables" as *;
 
-
 .hero {
-
-    min-height:85vh;
-
-    background-size:cover;
-
-    background-position:center;
-
-    position:relative;
-
-
-
-    .hero-overlay {
-
-        min-height:85vh;
-
-        display:flex;
-
-        align-items:center;
-
-        justify-content:center;
-
-
-        background:
-        linear-gradient(
-            rgba(246,241,231,.78),
-            rgba(246,241,231,.88)
-        );
-
-    }
-
-
-
-    .hero-content {
-
-        max-width:850px;
-
-        text-align:center;
-
-        padding:2rem;
-
-
-    }
-
-
-
-    .hero-sparkle {
-
-        color:$fox;
-
-        font-size:1rem;
-
-        letter-spacing:3px;
-
-        text-transform:uppercase;
-
-    }
-
-
-
-    h1 {
-
-        font-family:$header-font;
-
-        color:$forest;
-
-        font-size:clamp(2.8rem,6vw,5rem);
-
-        line-height:1.2;
-
-        margin:1rem 0;
-
-
-    }
-
-
-
-    .tagline {
-
-        max-width:650px;
-
-        margin:auto;
-
-        font-family:$font;
-
-        color:$brown;
-
-        font-size:1.35rem;
-
-        line-height:1.8;
-
-    }
-
-
-
-    .hero-buttons {
-
-        display:flex;
-
-        justify-content:center;
-
-        gap:1.5rem;
-
-        margin-top:2.5rem;
-
-
-    }
-
-
-
-    a {
-
-        padding:.9rem 2rem;
-
-        border-radius:$radius;
-
-        font-size:1.1rem;
-
-        transition:$transition;
-
-    }
-
-
-
-    .primary-button {
-
-        background:$forest;
-
-        color:$cream;
-
-
-
-        &:hover {
-
-            background:$gold;
-
-            color:$brown;
-
-            transform:translateY(-4px);
-
-            box-shadow:$shadow;
-
-        }
-
-    }
-
-
-
-    .secondary-button {
-
-        border:2px solid $forest;
-
-        color:$forest;
-
-
-
-        &:hover {
-
-            background:$forest;
-
-            color:$cream;
-
-            transform:translateY(-4px);
-
-        }
-
-    }
-
+	min-height: 85vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+
+	.hero-overlay {
+		min-height: 85vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(
+			rgba(246, 241, 231, 0.767),
+			rgba(246, 241, 231, 0.548)
+		);
+	}
+
+	.hero-content {
+		max-width: 850px;
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.hero-sparkle {
+		color: $fox;
+		font-weight: bold;
+		font-size: 1rem;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2.8rem, 6vw, 5rem);
+		line-height: 1.2;
+		margin: 1rem 0;
+	}
+
+	.tagline {
+		max-width: 650px;
+		margin: auto;
+		font-family: $font;
+		color: $brown;
+		font-size: 1.35rem;
+		line-height: 1.8;
+	}
+
+	.hero-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+		margin-top: 2.5rem;
+	}
+
+	a {
+		padding: 0.9rem 2rem;
+		border-radius: $radius;
+		font-size: 1.1rem;
+		transition: $transition;
+	}
+
+	.primary-button {
+		background: $gold;
+		color: $brown;
+
+		&:hover {
+			background: $fox;
+			color: $brown;
+			transform: translateY(-4px);
+			box-shadow: $shadow;
+		}
+	}
+
+	.secondary-button {
+		background: $fox;
+		color: $brown;
+
+		&:hover {
+			background: $gold;
+			color: $brown;
+			transform: translateY(-4px);
+		}
+	}
 }
 
+@media (max-width: $tablet) {
+	.hero {
+		min-height: 75vh;
+	}
 
+	.hero-overlay {
+		min-height: 75vh !important;
+	}
 
-// Mobile
-
-@media(max-width:$tablet) {
-
-
-    .hero {
-
-        min-height:75vh;
-
-    }
-
-
-    .hero-overlay {
-
-        min-height:75vh !important;
-
-    }
-
-
-    .hero-buttons {
-
-        flex-direction:column;
-
-    }
-
-
-    .hero-buttons a {
-
-        width:100%;
-
-    }
-
+	.hero-buttons {
+		flex-direction: column;
+		a {
+			width: 100%;
+		}
+	}
 }

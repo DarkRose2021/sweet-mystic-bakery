@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import "./About.scss";
 
-import bakerImage from "../assets/images/Main-Logo.png";
-import cookiesImage from "../assets/images/Main-Logo.png";
+import bakerImage from "../../assets/images/Main-Logo.png";
+import cookiesImage from "../../assets/images/Main-Logo.png";
 
 function About() {
 	return (

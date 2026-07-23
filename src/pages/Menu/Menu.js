@@ -1,27 +1,27 @@
 import { useState } from "react";
-import ProductCard from "../components/ProductCard/ProductCard";
-import { menuItems } from "./menuData";
+import ProductCard from "../../components/ProductCard/ProductCard";
+// import { menuItems } from "./menuData";
 import "./Menu.scss";
 
-const categories = [
-	"All",
-	"Cookies",
-	"Cupcakes",
-	"Cakes",
-	"Breakfast",
-	"Pastries",
-	"Bars",
-	"Pies",
-	"Bread",
-];
+// const categories = [
+// 	"All",
+// 	"Cookies",
+// 	"Cupcakes",
+// 	"Cakes",
+// 	"Breakfast",
+// 	"Pastries",
+// 	"Bars",
+// 	"Pies",
+// 	"Bread",
+// ];
 
 function Menu() {
-	const [selectedCategory, setSelectedCategory] = useState("All");
+	const [selectedCategory] = useState("All");
 
-	const filteredItems =
-		selectedCategory === "All"
-			? menuItems
-			: menuItems.filter((item) => item.category === selectedCategory);
+	// const filteredItems =
+	// 	selectedCategory === "All"
+	// 		? menuItems
+	// 		: menuItems.filter((item) => item.category === selectedCategory);
 
 	return (
 		<main className="menu-page">
@@ -36,7 +36,7 @@ function Menu() {
 				</p>
 			</section>
 
-			<section className="menu-filters">
+			{/* <section className="menu-filters">
 				{categories.map((category) => (
 					<button
 						key={category}
@@ -46,10 +46,10 @@ function Menu() {
 						{category}
 					</button>
 				))}
-			</section>
+			</section> */}
 
 			<section className="menu-grid">
-				{filteredItems.map((item) => (
+				{selectedCategory.map((item) => (
 					<ProductCard key={item.id} product={item} />
 				))}
 			</section>
