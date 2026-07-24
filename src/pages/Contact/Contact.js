@@ -4,7 +4,6 @@ import "./Contact.scss";
 
 function Contact() {
 	const form = useRef();
-
 	const [sent, setSent] = useState(false);
 
 	const sendEmail = (e) => {
@@ -12,14 +11,14 @@ function Contact() {
 
 		emailjs
 			.sendForm(
-				"service_80hnfvx",
+				process.env.REACT_APP_EMAIL_SERVICE_ID,
 
-				"template_72be4o8",
+				process.env.REACT_APP_BAKERY_TEMPLATE_ID,
 
 				form.current,
 
 				{
-					publicKey: "bVPKyuESrPL7l7_rP",
+					publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
 				}
 			)
 
@@ -72,13 +71,11 @@ function Contact() {
 
 					<div className="info-item">
 						<h3>✦ Follow Along</h3>
-
 						<div className="social-links">
-							<a href="www.google.com">Facebook</a>
-
-							<a href="www.google.com">Instagram</a>
-
-							<a href="www.google.com">Pinterest</a>
+							<a href="https://www.facebook.com/profile.php?id=61591828713766">
+								Facebook
+							</a>
+							{/* <a href="www.google.com">Instagram</a> */}
 						</div>
 					</div>
 				</div>
@@ -98,18 +95,6 @@ function Contact() {
 							name="customer_email"
 							placeholder="Your email"
 						/>
-					</div>
-
-					<div className="form-group">
-						<label>Order Type</label>
-
-						<select name="order_type">
-							<option>Cookies</option>
-
-							<option>Cakes</option>
-
-							<option>Custom Order</option>
-						</select>
 					</div>
 
 					<div className="form-group">

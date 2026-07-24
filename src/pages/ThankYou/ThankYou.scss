@@ -1,0 +1,223 @@
+@use "../../styles/variables" as *;
+
+.thank-you-page {
+
+	min-height: 100vh;
+
+	background: $cream;
+
+	padding: 5rem 1.5rem;
+
+	display: flex;
+
+	align-items: center;
+
+	justify-content: center;
+
+}
+
+.confirmation-card {
+
+	max-width: 750px;
+
+	width: 100%;
+
+	background: white;
+
+	padding: 3rem;
+
+	border-radius: $radius;
+
+	box-shadow: $shadow;
+
+	text-align: center;
+
+}
+
+.icon {
+
+	font-size: 4rem;
+
+	margin-bottom: 1.5rem;
+
+}
+
+.confirmation-card h1 {
+
+	font-family: $header-font;
+
+	color: $forest;
+
+	margin-bottom: 1.5rem;
+
+}
+
+.confirmation-card p {
+
+	font-family: $font;
+
+	color: $brown;
+
+	font-size: 1.1rem;
+
+	line-height: 1.8;
+
+	margin-bottom: 1rem;
+
+}
+
+.next-steps {
+
+	background: rgba($sage, .15);
+
+	padding: 2rem;
+
+	border-radius: $radius;
+
+	margin: 2rem 0;
+
+	text-align: left;
+
+}
+
+.next-steps h2 {
+
+	font-family: $header-font;
+
+	color: $forest;
+
+	margin-bottom: 1rem;
+
+}
+
+.next-steps ul {
+
+	list-style: none;
+
+	padding: 0;
+
+}
+
+.next-steps li {
+
+	padding: .6rem 0;
+
+	font-family: $font;
+
+	color: $brown;
+
+}
+
+.important {
+
+	background: rgba($gold, .15);
+
+	border-left: 5px solid $gold;
+
+	padding: 1.5rem;
+
+	border-radius: $radius;
+
+	margin-bottom: 2rem;
+
+	text-align: left;
+
+}
+
+.important h3 {
+
+	font-family: $header-font;
+
+	color: $forest;
+
+	margin-bottom: .75rem;
+
+}
+
+.buttons {
+
+	display: flex;
+
+	justify-content: center;
+
+	gap: 1rem;
+
+	flex-wrap: wrap;
+
+	margin-top: 2rem;
+
+}
+
+.primary-btn,
+.secondary-btn {
+
+	padding: 1rem 2rem;
+
+	border-radius: $radius;
+
+	text-decoration: none;
+
+	font-family: $font;
+
+	font-size: 1.1rem;
+
+	transition: .3s;
+
+}
+
+.primary-btn {
+
+	background: $fox;
+
+	color: $cream;
+
+	&:hover {
+
+		background: $gold;
+
+		color: $brown;
+
+	}
+
+}
+
+.secondary-btn {
+
+	border: 2px solid $forest;
+
+	color: $forest;
+
+	background: transparent;
+
+	&:hover {
+
+		background: $forest;
+
+		color: $cream;
+
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.confirmation-card {
+
+		padding: 2rem;
+
+	}
+
+	.buttons {
+
+		flex-direction: column;
+
+	}
+
+	.primary-btn,
+	.secondary-btn {
+
+		width: 100%;
+
+	}
+
+}

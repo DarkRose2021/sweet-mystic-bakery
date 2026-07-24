@@ -1,0 +1,157 @@
+@use "../../styles/variables" as *;
+
+.product-details {
+	min-height: 100vh;
+	background: $cream;
+	padding: 5rem 2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	max-width: 1200px;
+	margin: auto;
+	align-items: center;
+}
+
+.product-details-image {
+	display: flex;
+	justify-content: center;
+	img {
+		width: 100%;
+		max-width: 500px;
+		height: 500px;
+		object-fit: cover;
+		border-radius: $radius;
+		box-shadow: $shadow;
+	}
+}
+
+.product-details-content {
+	background: white;
+	padding: 3rem;
+	border-radius: $radius;
+	box-shadow: $shadow;
+
+	.category {
+		color: $fox;
+		font-family: $font;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin-bottom: 0.75rem;
+	}
+
+	h1 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: clamp(2rem, 4vw, 3rem);
+		margin-bottom: 1.5rem;
+		line-height: 1.2;
+	}
+
+	.description {
+		color: $brown;
+		font-family: $font;
+		font-size: 1.15rem;
+		line-height: 1.8;
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-family: $header-font;
+		color: $forest;
+		font-size: 1.4rem;
+		margin-top: 2rem;
+		margin-bottom: 0.75rem;
+	}
+
+	p {
+		color: $brown;
+		font-family: $font;
+		line-height: 1.7;
+	}
+}
+
+.price {
+	display: block;
+	font-family: $header-font;
+	font-size: 2rem;
+	color: $gold;
+	margin: 2rem 0;
+}
+
+.order-button {
+	display: inline-block;
+	background: $fox;
+	color: $cream;
+	padding: 0.9rem 2rem;
+	border-radius: $radius;
+	text-decoration: none;
+	font-family: $font;
+	font-size: 1.1rem;
+	transition: 0.3s ease;
+
+	&:hover {
+		background: $gold;
+		color: $brown;
+		transform: translateY(-3px);
+	}
+}
+
+.not-found {
+	min-height: 60vh;
+	background: $cream;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	h1 {
+		font-family: $header-font;
+		color: $forest;
+	}
+
+	a {
+		margin-top: 1rem;
+		color: $fox;
+		font-family: $font;
+	}
+}
+
+@media (max-width: 900px) {
+	.product-details {
+		grid-template-columns: 1fr;
+		padding: 3rem 1.5rem;
+		gap: 2rem;
+	}
+
+	.product-details-image {
+		img {
+			height: 350px;
+		}
+	}
+
+	.product-details-content {
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.product-details {
+		padding: 2rem 1rem;
+	}
+
+	.product-details-image {
+		img {
+			height: 280px;
+		}
+	}
+
+	.product-details-content {
+		padding: 1.5rem;
+
+		h1 {
+			font-size: 2rem;
+		}
+	}
+}

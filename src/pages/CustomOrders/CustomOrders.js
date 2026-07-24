@@ -42,14 +42,14 @@ function CustomOrders() {
 
 		emailjs
 			.sendForm(
-				"service_80hnfvx",
+				"process.env.REACT_APP_EMAIL_SERVICE_ID",
 
 				"template_1wgjos2",
 
 				form.current,
 
 				{
-					publicKey: "bVPKyuESrPL7l7_rP",
+					publicKey: "process.env.REACT_APP_EMAIL_PUBLIC_KEY",
 				}
 			)
 
